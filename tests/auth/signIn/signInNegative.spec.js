@@ -26,7 +26,7 @@ const testParameters = [
     username: '',
     password: '',
     message: ENTER_USERNAME_AND_PASSWORD,
-    title: `emtpy 'Username' and 'Password' fields`,
+    title: `empty 'Username' and 'Password' fields`,
   }
 ];
 

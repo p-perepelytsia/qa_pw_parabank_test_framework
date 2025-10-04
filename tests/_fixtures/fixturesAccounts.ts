@@ -47,9 +47,9 @@ export const test = base.extend<{
     await use(updateContactInfoPage);
   },
   requestLoanPage: async ({ page }, use) => {
-    const requestLoanPag = new RequestLoanPage(page);
+    const requestLoanPage = new RequestLoanPage(page);
 
-    await use(requestLoanPag);
+    await use(requestLoanPage);
   },
 });
 

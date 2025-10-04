@@ -34,7 +34,7 @@ test.describe(`'Find Transactions' positive tests`, () => {
     });
   });
 
-  test(`Find transaction by Dat Range`, async ({ findTransactionsPage }) => {
+  test(`Find transaction by Date Range`, async ({ findTransactionsPage }) => {
     await findTransactionsPage.open();
     await findTransactionsPage.selectAccount(createdAccount.accountNumber);
     await findTransactionsPage.fillTransactionField('fromToDate', getFormattedDate(-1), getFormattedDate(1));

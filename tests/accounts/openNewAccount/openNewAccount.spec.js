@@ -26,7 +26,7 @@ test.describe(`Open new accounts with different types`, () => {
       await openNewAccountPage.selectAccountType(accountType);
       await openNewAccountPage.selectDepositAccount(accountId);
       await openNewAccountPage.clickOpenNewAccountButton();
-      await openNewAccountPage.assertAccoutOpeningSuccess();
+      await openNewAccountPage.assertAccountOpeningSuccess();
     });
   });
 });

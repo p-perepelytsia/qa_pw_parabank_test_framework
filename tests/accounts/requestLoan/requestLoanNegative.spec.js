@@ -24,7 +24,7 @@ const testParameters = [
     loanAmount: '',
     downPayment: '',
     message: INTERNAL_ERROR,
-    title: `both emtpy 'Loan Amount' and 'Down Payment' fields`,
+    title: `both empty 'Loan Amount' and 'Down Payment' fields`,
   },
   {
     loanAmount: faker.word.words(),

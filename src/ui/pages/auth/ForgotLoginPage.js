@@ -12,7 +12,7 @@ export class ForgotLoginPage {
     this.zipCodeField = page.locator('[id="address\\.zipCode"]');
     this.ssnField = page.locator('#ssn');
     this.findMyLoginInfoButton = page.getByRole('button', { name: 'Find My Login Info' });
-    this.logedInMessage = page.getByText('Your login information was located successfully. You are now logged in.');
+    this.loggedInMessage = page.getByText('Your login information was located successfully. You are now logged in.');
   }
 
   async step(title, stepToRun) {
@@ -62,7 +62,7 @@ export class ForgotLoginPage {
   }
 
   async fillSsnField(ssn) {
-    await this.step(`Fill the 'SNN' field`, async () => {
+    await this.step(`Fill the 'SSN' field`, async () => {
       await this.ssnField.fill(ssn);
     });
   }
@@ -75,7 +75,7 @@ export class ForgotLoginPage {
 
  async assertLoggedInMessageIsVisible() {
     await this.step(`Assert the logged in message is visible`, async () => {
-      await expect(this.logedInMessage).toBeVisible();
+      await expect(this.loggedInMessage).toBeVisible();
     });
   }
 

@@ -43,15 +43,15 @@ export class OpenNewAccountPage {
     });
   }
 
- async submitNewAccountCreation(accountType, accoundId) {
+ async submitNewAccountCreation(accountType, accountId) {
     await this.step(`Submit new account creation form`, async () => {
       await this.selectAccountType(accountType);
-      await this.selectDepositAccount(accoundId);
+      await this.selectDepositAccount(accountId);
       await this.clickOpenNewAccountButton();
     });
  }
 
-  async assertAccoutOpeningSuccess() {
+  async assertAccountOpeningSuccess() {
     await this.step(`Assert new account opened successfully`, async () => {
       await expect(this.page.getByRole('heading', { name: 'Account Opened!' })).toHaveText('Account Opened!');
       await expect(this.page.locator('text=Congratulations, your account is now open.')).toBeVisible();

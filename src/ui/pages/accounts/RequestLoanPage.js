@@ -66,8 +66,8 @@ async clickOnCreatedAccountLink() {
         const accountBalanceCell = this.page.locator('#balance');
         await expect(accountBalanceCell).toHaveText(accountBalance);
 
-        const accountАvailableBalanceCell = this.page.locator('#availableBalance');
-        await expect(accountАvailableBalanceCell).toHaveText(accountBalance);
+        const accountAvailableBalanceCell = this.page.locator('#availableBalance');
+        await expect(accountAvailableBalanceCell).toHaveText(accountBalance);
       }
     );
   }

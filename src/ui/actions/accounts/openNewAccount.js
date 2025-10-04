@@ -1,7 +1,7 @@
 import { testStep } from "../../../common/helpers/pwHelpers";
 import { OpenNewAccountPage } from "../../pages/accounts/OpenNewAccountPage";
 
-export async function openNewAccount(page, accountType, accoundId, userId = 0) {
+export async function openNewAccount(page, accountType, accountId, userId = 0) {
   let accountNumber;
   let amount;
 
@@ -9,7 +9,7 @@ export async function openNewAccount(page, accountType, accoundId, userId = 0) {
       const openNewAccountPage = new OpenNewAccountPage(page, userId);
 
       await openNewAccountPage.open();
-      await openNewAccountPage.submitNewAccountCreation(accountType, accoundId);
+      await openNewAccountPage.submitNewAccountCreation(accountType, accountId);
       await openNewAccountPage.assertAccoutOpeningSuccess();
 
       accountNumber = await openNewAccountPage.getCreatedAccountNumber();

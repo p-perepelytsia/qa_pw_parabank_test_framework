@@ -1,0 +1,1 @@
+✅ Allure results folder deleted before tests

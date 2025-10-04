@@ -28,8 +28,36 @@ npm install -g allure-commandline
 
 ## How to run the tests
 
-// TODO - It's part of your task to add the appropriate instructions here. 
+To execute the test suite, use the following command in the project root directory:
+
+```bash
+npx playwright test
+```
+
+You can run specific tests or folders by providing a path, for example:
+
+```bash
+npx playwright test tests/login.spec.ts
+```
+
+To run tests with a specific browser, use:
+
+```bash
+npx playwright test --project=chromium
+```
 
 ## How to generate report
 
-// TODO - It's part of your task to add the appropriate instructions here. 
+After running the tests, you can generate an Allure report with:
+
+```bash
+npx allure generate allure-results --clean -o allure-report
+```
+
+To open the generated report in your browser, run:
+
+```bash
+npx allure open allure-report
+```
+
+Make sure you have installed the Allure commandline tool as described in the installation steps.
